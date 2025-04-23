@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Baptiste-Fetet/infra.git
     targetRevision: HEAD
-    path: applications/gitea
+    path: charts/gitea
     helm:
       values: |
         postgresql:
