@@ -1,0 +1,35 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gitea
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Baptiste-Fetet/infra.git
+    targetRevision: HEAD
+    path: applications/gitea
+    helm:
+      values: |
+        postgresql:
+          enabled: true
+          postgresqlPassword: gitea
+        gitea:
+          admin:
+            username: gitea
+            password: gitea
+            email: gitea@example.com
+          config:
+            database:
+              DB_TYPE: postgres
+              HOST: postgresql.gitea.svc.cluster.local:5432
+              NAME: gitea
+              USER: postgres
+              PASSWD: gitea
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: gitea
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
