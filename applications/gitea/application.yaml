@@ -31,5 +31,5 @@ spec:
     namespace: gitea
   syncPolicy:
     automated:
-      prune: true
+      prune: false
       selfHeal: true
