@@ -1,16 +1,8 @@
-postgresql:
-  enabled: true
-  postgresqlPassword: gitea
+image:
+  repository: gitea/gitea
+  tag: "1.21.0"
+  pullPolicy: IfNotPresent
 
-gitea:
-  admin:
-    username: gitea
-    password: gitea
-    email: gitea@example.com
-  config:
-    database:
-      DB_TYPE: postgres
-      HOST: postgresql.gitea.svc.cluster.local:5432
-      NAME: gitea
-      USER: postgres
-      PASSWD: gitea
+service:
+  type: ClusterIP
+  port: 3000
