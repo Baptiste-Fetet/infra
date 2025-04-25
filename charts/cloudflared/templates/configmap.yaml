@@ -8,7 +8,7 @@ data:
     tunnel: k8s
     ingress:
       - hostname: argocd.fetet.net
-        service: http://rke2-ingress-nginx-controller-admission.kube-system.svc.cluster.local:443
+        service: http://argpcd-server.argocd.svc.cluster.local:443
         originServerName: "argocd.fetet.net"
         noTLSVerify: true
       - hostname: example.fetet.net
