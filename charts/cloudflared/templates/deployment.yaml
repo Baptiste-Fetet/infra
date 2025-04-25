@@ -29,7 +29,7 @@ spec:
               subPath: /etc/cloudflared/creds.json
             - name: config
               mountPath: /etc/cloudflared/
-              subPath: /etc/cloudflared/cert.pem
+              subPath: cert.pem
       volumes:
         - name: config
           configMap:
