@@ -1,5 +1,0 @@
-apiVersion: v2
-name: Cloudflared
-description: A Helm chart for Cloudflared
-version: 1.0.0
-appVersion: "1.21.0"
