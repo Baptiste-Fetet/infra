@@ -17,14 +17,13 @@ spec:
         - name: cloudflared
           image: cloudflare/cloudflared:latest
           args:
-            #- tunnel
-            #- --origincert
-            - cat
+            - tunnel
+            - --origincert
             - /etc/cloudflared/cert.pem
-            #- run
-            #- --cred-file
-            #- /etc/cloudflared/creds.json
-            #- k8s
+            - run
+            - --cred-file
+            - /etc/cloudflared/creds.json
+            - k8s
           volumeMounts:
             - name: config
               mountPath: /etc/cloudflared/creds.json
