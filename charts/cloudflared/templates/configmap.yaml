@@ -12,3 +12,5 @@ data:
       - hostname: example.fetet.net
         service: hello_world
       - service: http_status:404
+    originRequest:
+      noTLSVerify: true
