@@ -25,7 +25,7 @@ spec:
             - /etc/cloudflared/creds.json
             - k8s
           volumeMounts:
-            - name: creds_cert
+            - name: creds-cert
               mountPath: /etc/cloudflared/
               readOnly: true
             - name: config
@@ -35,7 +35,7 @@ spec:
         - name: config
           configMap:
             name: cloudflared-config
-        - name: creds_cert
+        - name: creds-cert
           hostPath:
             path: /etc/cloudflared
             type: Directory
