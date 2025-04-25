@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cloudflared-config
+  namespace: cloudflared
+data:
+  config.yaml: |
+    tunnel: k8s
+    credentials-file: /root/.cloudflared/756a650b-cd96-4323-a5c1-6dfc10564aa3.json
+    ingress:
+      - hostname: argocd.fetet.netargocd.fetet.netargocd.fetet.net
+        service: http://traefik.traefik.svc.cluster.local:80
+      - service: http_status:404
