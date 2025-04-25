@@ -27,7 +27,7 @@ spec:
           volumeMounts:
             - name: creds-cert
               mountPath: /etc/cloudflared/
-              readOnly: true
+              readOnly: false
             - name: config
               mountPath: /etc/cloudflared/config.yaml
               subPath: config.yaml
