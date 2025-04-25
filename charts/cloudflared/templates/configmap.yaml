@@ -12,7 +12,7 @@ data:
       - hostname: gitea.fetet.net
         service: http://gitea.gitea.svc.cluster.local:3000
       - hostname: keycloak.fetet.net
-        service: http://keycloak-http.keycloak.svc.cluster.local:3000
+        service: http://keycloak-http.keycloak.svc.cluster.local:8080
       - service: http_status:404
     originRequest:
       noTLSVerify: true
