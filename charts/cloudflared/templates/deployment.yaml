@@ -26,16 +26,9 @@ spec:
             - k8s
           volumeMounts:
             - name: config
-              mountPath: /etc/cloudflared/creds.json
-              subPath: creds.json
-            - name: creds-volume
-              mountPath: /etc/cloudflared/cert.pem
-              subPath: cert.pem
+              mountPath: /etc/cloudflared/
       volumes:
         - name: config
-          configMap:
-            name: cloudflared-config
-        - name: creds-volume
           configMap:
             name: cloudflared-config
 
