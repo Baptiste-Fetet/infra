@@ -20,7 +20,7 @@ spec:
             - tunnel
             - run
             - --cred-file
-            - /root/.cloudflared/756a650b-cd96-4323-a5c1-6dfc10564aa3.json
+            - /etc/cloudflared/creds.json
           volumeMounts:
             - name: config
               mountPath: /etc/cloudflared/
