@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: argocd
   namespace: argocd
-  ingressClassName: cloudflare-tunnel
+  ingressClassName: nginx
 spec:
   rules:
     - host: argocd.fetet.net
@@ -16,3 +16,6 @@ spec:
                 name: argocd-server
                 port:
                   number: 80
+  tls:
+  - hosts:
+    - argocd.fetet.net
