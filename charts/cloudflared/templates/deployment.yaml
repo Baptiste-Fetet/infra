@@ -19,7 +19,6 @@ spec:
           args:
             - tunnel
             - run
-            - --no-autoupdate
             - --config
             - /etc/cloudflared/config.yaml
             - --cred-file
