@@ -21,6 +21,8 @@ spec:
             - run
             - --cred-file
             - /etc/cloudflared/creds.json
+            - --origincert
+            - /etc/cloudflared/cert.pem
           volumeMounts:
             - name: config
               mountPath: /etc/cloudflared/
