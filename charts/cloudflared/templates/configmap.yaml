@@ -9,6 +9,7 @@ data:
     ingress:
       - hostname: argocd.fetet.net
         service: https://argocd-server.argocd.svc.cluster.local:443
+        originService: https://argocd.fetet.net
       - hostname: example.fetet.net
         service: hello_world
       - service: http_status:404
