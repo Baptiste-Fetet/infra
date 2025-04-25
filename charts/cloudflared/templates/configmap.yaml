@@ -8,7 +8,7 @@ data:
     tunnel: k8s
     ingress:
       - hostname: argocd.fetet.net
-        service: http://argocd-server.argocd.svc.cluster.local:443
+        service: https://argocd-server.argocd.svc.cluster.local:443
       - hostname: example.fetet.net
         service: hello_world
       - service: http_status:404
