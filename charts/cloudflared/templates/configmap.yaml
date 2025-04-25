@@ -9,8 +9,8 @@ data:
     ingress:
       - hostname: argocd.fetet.net
         service: https://argocd-server.argocd.svc.cluster.local:443
-      - hostname: example.fetet.net
-        service: hello_world
+      - hostname: gitea.fetet.net
+        service: https://gitea.gitea.svc.cluster.local:443
       - service: http_status:404
     originRequest:
       noTLSVerify: true
