@@ -10,7 +10,7 @@ data:
       - hostname: argocd.fetet.net
         service: https://argocd-server.argocd.svc.cluster.local:443
       - hostname: gitea.fetet.net
-        service: https://gitea.gitea.svc.cluster.local:443
+        service: https://gitea.gitea.svc.cluster.local:3000
       - service: http_status:404
     originRequest:
       noTLSVerify: true
