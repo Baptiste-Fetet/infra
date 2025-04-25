@@ -10,3 +10,5 @@ data:
       - hostname: argocd.fetet.net
         service: https://rke2-ingress-nginx-controller-admission.kube-system.svc.cluster.local:443
       - service: http_status:404
+      - hostname: example.fetet.net
+        service: http://web-service:80
