@@ -8,5 +8,5 @@ data:
     tunnel: k8s
     ingress:
       - hostname: argocd.fetet.net
-        service: http://traefik.traefik.svc.cluster.local:80
+        service: http://rke2-ingress-nginx-controller.kube-system.svc.cluster.local:80
       - service: http_status:404
