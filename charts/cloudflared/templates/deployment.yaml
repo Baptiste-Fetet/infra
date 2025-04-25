@@ -18,11 +18,11 @@ spec:
           image: cloudflare/cloudflared:latest
           args:
             - tunnel
+            - --origincert
+            - /etc/cloudflared/cert.pem
             - run
             - --cred-file
             - /etc/cloudflared/creds.json
-            - --origincert
-            - /etc/cloudflared/cert.pem
           volumeMounts:
             - name: config
               mountPath: /etc/cloudflared/
