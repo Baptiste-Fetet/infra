@@ -10,6 +10,7 @@ data:
       - hostname: argocd.fetet.net
         service: https://rke2-ingress-nginx-controller-admission.kube-system.svc.cluster.local:443
         originServerName: "argocd.fetet.net"
+        noTLSVerify: true
       - hostname: example.fetet.net
         service: hello_world
       - service: http_status:404
