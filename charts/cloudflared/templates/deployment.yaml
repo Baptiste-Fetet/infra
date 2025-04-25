@@ -26,6 +26,10 @@ spec:
           volumeMounts:
             - name: config
               mountPath: /etc/cloudflared/
+              subPath: /etc/cloudflared/creds.json
+            - name: config
+              mountPath: /etc/cloudflared/
+              subPath: /etc/cloudflared/cert.pem
       volumes:
         - name: config
           configMap:
