@@ -28,9 +28,9 @@ spec:
             - name: creds-cert
               mountPath: /etc/cloudflared/
               readOnly: true
-            #- name: config
-            #  mountPath: /etc/cloudflared/config.yaml
-            #  subPath: config.yaml
+            - name: config
+              mountPath: /etc/cloudflared/config.yaml
+              subPath: config.yaml
       volumes:
         - name: config
           configMap:
